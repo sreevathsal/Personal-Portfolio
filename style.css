@@ -1,0 +1,246 @@
+/* Base Styles */
+:root {
+    --primary-color: #0366d6;
+    --secondary-color: #24292e;
+    --background-color: #f6f8fa;
+    --text-color: #24292e;
+    --border-color: #e1e4e8;
+    --card-background: #ffffff;
+    --hover-color: #0366d6;
+    --font-primary: 'Epilogue', sans-serif;
+    --font-secondary: 'Noto Sans', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-secondary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+  
+  ul {
+    list-style-position: inside;
+    margin-left: 10px;
+  }
+  
+  /* Layout */
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+  }
+  
+  .branding {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a svg {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover svg {
+    color: var(--primary-color);
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* About Section */
+  .my-github {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sections */
+  .section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  
+  .section-description {
+    margin-bottom: 20px;
+  }
+  
+  /* Education */
+  .education-card {
+    padding: 15px 0;
+  }
+  
+  .education-card h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+  }
+  
+  .education-program {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .education-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #586069;
+  }
+  
+  /* Timeline for experiences and projects */
+  .timeline {
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .timeline li {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
+  }
+  
+  .timeline li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  .my-intern {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .my-intern h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+  
+  .my-intern span {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .my-intern span a {
+    font-size: 0.9rem;
+  }
+  
+  /* Utilities */
+  .margin-b-req {
+    margin-bottom: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .main-content {
+      grid-template-columns: 1fr;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .header {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .my-intern {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .education-details {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .section {
+      padding: 20px;
+    }
+    
+    .avatar {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  /* Dark Mode - Uncomment to enable */
+  /* 
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: #58a6ff;
+      --secondary-color: #e6edf3;
+      --background-color: #0d1117;
+      --text-color: #c9d1d9;
+      --border-color: #30363d;
+      --card-background: #161b22;
+    }
+  }
+  */
